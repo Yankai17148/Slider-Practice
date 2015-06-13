@@ -1,0 +1,125 @@
+*{
+	margin:0;
+	padding:0;
+}
+body, html{
+	height: 100%;
+	font-family: "Open Sans","Segoe UI","Helvetica",sans-serif;
+}
+body{
+	padding:50px 0;
+}
+#slider,
+#slider .main,
+#slider .main .main-i{
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+#slider{
+	width: 1280px;
+	margin: auto;
+}
+#slider .main {
+	overflow: hidden;
+}
+#slider .main .main-i{
+	opacity: 0;
+	position: absolute;
+	top:0;
+	right:60%;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+#slider .main .main-i img{
+	position: absolute;
+	top:0;
+	left:0;
+}
+#slider .main .main-i .caption{
+	position: absolute;
+	top:100px;
+	right:60%;
+	text-align: right;
+}
+#slider .main .main-i .caption h2{
+	margin-right: 45px;
+	opacity: 0;
+	font-size: 50px;
+	line-height: 80px;
+	color:#0180cf;
+	-webkit-transition: all .3s .4s;
+	transition: all .3s .4s;
+}
+#slider .main .main-i .caption h3{
+	margin-right: -45px;
+	opacity: 0;
+	font-size: 32px;
+	color:#666;
+	font-family: Verdana;
+	-webkit-transition: all .3s .4s;
+	transition: all .3s .4s;
+}
+/*control*/
+#slider .control{
+	width: 100%;
+	position: absolute;
+	bottom:-13px;
+	height:13px;
+	font-size: 0;
+	text-align: center;
+}
+#slider .control .control-i{
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	height:13px;
+	background-color: #666;
+	box-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	margin-right: 5px;
+}
+#slider .control .control-i img{
+	width: 100%;
+	position: absolute;
+	left:0;
+	bottom:50px;
+	opacity: 0;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	z-index: 3
+}
+#slider .control .control-i:hover{
+	background-color: #ccc;
+}
+#slider .control .control-i:hover img{
+	bottom:13px;
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
+	-webkit-box-reflect: below 0px -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			from(transparent),
+			color-stop(50%, transparent),
+			to(rgba(255,255,255,.3))
+		);
+	opacity: 1;
+}
+#slider .control .control-i.active{
+	background-color: #333;
+}
+#slider .control .control-i.active img{
+	opacity: 0;
+}
+#slider .main .main-i.active{
+	right:0;
+	opacity: 1;
+	z-index: 1
+}
+#slider .main .main-i.active .caption h2,
+#slider .main .main-i.active .caption h3{
+	opacity: 1;
+	margin-right: 0;
+}
