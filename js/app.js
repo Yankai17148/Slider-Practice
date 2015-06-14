@@ -1,32 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta name="renderer" content="webkit">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Silder</title>
-</head>
-<body>
-	<div id="slider">
-		<div class="main" id="tempMain">
-			<div class="main-i" id="main-{{index}}">
-				<img src="imgs/{{index}}.jpg" alt="">
-				<div class="caption">
-					<h2>{{h2}}</h2>
-					<h3>{{h3}}</h3>
-				</div>
-			</div>
-		</div>
-		<div class="control" id="tempCtrl">
-			<a href="javascript:switchSlider({{index}});" class="control-i" id="control-{{index}}">
-				<img src="imgs/{{index}}.jpg" alt="">
-			</a>
-		</div>
-	</div>
-
-	<script type="text/javascript" src="js/app.js"></script>
-	<script>
+(function(){
 		// 数据
 		var data = [
 			{img: 1, h2: "Careay", h3: "HOME"},
@@ -79,6 +51,4 @@
 			addSlider();
 			switchSlider(1);
 		};
-	</script>
-</body>
-</html>
+})()
